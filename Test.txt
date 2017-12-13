@@ -1,0 +1,16 @@
+ if (Input.GetMouseButton(0))
+        {
+            RaycastHit castHit;
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out castHit))
+            {
+                TouchPoint tp=castHit.collider.GetComponent<TouchPoint>();
+                if (tp == null)
+                {
+                    Debug.Log("Miss");
+                    return;
+                }
+                Destroy(tp.gameObject);
+                curPoint = null;
+            }
+        }
