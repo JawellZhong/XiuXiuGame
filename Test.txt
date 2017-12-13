@@ -13,8 +13,4 @@
                 Destroy(tp.gameObject);
                 curPoint = null;
             }
-        }
-
-
-
-1234
+        }adsfasdf
